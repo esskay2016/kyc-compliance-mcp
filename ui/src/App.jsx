@@ -140,7 +140,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <p style={S.footer}>Detailed findings &amp; audit trace are officer-gated. Demo passcode: compliance2026</p>
+      <p style={S.footer}>Detailed findings &amp; audit trace are officer-gated.</p>
     </div>
   );
 }

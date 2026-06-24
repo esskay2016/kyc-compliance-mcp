@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+ui/node_modules/
+
+# build output
+dist/
+ui/dist/
+
+# secrets — NEVER commit
+.env
+.env.local
+*.env
+
+# audit run artifacts
+audit-*.jsonl
+
+# OS / editor
+.DS_Store
+*.log
+

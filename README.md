@@ -71,8 +71,7 @@ weighs.
 The model orchestrates the calls. Given a business applicant it will typically call
 `assess_industry_risk` first (a PROHIBITED result can short-circuit to FAIL), then
 `screen_sanctions` on the company and each owner, `lookup_business` to verify the entity, and
-`assess_country_risk` on any non-US owner. For a personal applicant it calls `verify_identity`
-and `screen_pep`. That orchestration is the model's, not the code's — which is what
+`assess_country_risk` on any non-US owner. For a personal applicant it calls and `verify_identity`. That orchestration is the model's, not the code's — which is what
 distinguishes MCP from a fixed serverless pipeline.
 
 ## Web UI
@@ -157,7 +156,7 @@ in a compliance review.
 <img width="979" height="851" alt="Gated Detail with PEP person" src="https://github.com/user-attachments/assets/efda214a-0728-480f-9516-72f974b57525" />
 
 
-## Notes / limitations (good to be honest about in interviews)
+## Notes / limitations
 
 - **Sanctions matching is simple** (token match, not fuzzy/phonetic). Real screening adds
   secondary identifiers (DOB, nationality) to cut false positives. The architecture — live

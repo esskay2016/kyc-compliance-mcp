@@ -93,13 +93,22 @@ app.post("/api/screen", async (req, res) => {
     };
 
     // Gated section — only released with the passcode
-    const gated = {
-      facts: result.facts,
-      modelDecision: result.validated.modelDecision,
-      overrideReasons: result.validated.overrideReasons,
-      auditTrace: result.auditTrace.map((e) => ({ seq: e.seq, type: e.type, timestamp: e.timestamp })),
-      auditIntact: audit.verify().ok,
-    };
+    const complianceNotes: string[] = [];
+    if (result.facts?.pepStatus === "INTEGRATION_POINT") {
+    complianceNotes.push(
+    "PEP screening is an integration point and could not be completed automatically — " +
+    "all other checks passed, but final clearance requires manual PEP completion."
+    );
+  }
+
+  const gated = {
+  facts: result.facts,
+  modelDecision: result.validated.modelDecision,
+  overrideReasons: result.validated.overrideReasons,
+  complianceNotes,
+  auditTrace: result.auditTrace.map((e) => ({ seq: e.seq, type: e.type, timestamp: e.timestamp })),
+  auditIntact: audit.verify().ok,
+};
 
     resultStore.set(applicant.caseId, gated);
 

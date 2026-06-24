@@ -141,6 +141,20 @@ enforces the non-negotiable checks and records everything.** That hybrid — rea
 deterministic guardrails — is the difference between a demo and a system you could defend
 in a compliance review.
 
+## Screenshots
+
+**Clean business applicant (PASS):** All checks pass; decision is PASS at 2/10 risk.
+![PASS case](https://via.placeholder.com/800x600?text=PASS+Case:+Clean+Business)
+
+**State-conditional industry (ESCALATE):** Cannabis in California triggers state-conditional escalation for enhanced due diligence.
+![ESCALATE case](https://via.placeholder.com/800x600?text=ESCALATE+Case:+Cannabis+in+CA)
+
+**Prohibited industry (FAIL):** Weapons dealer hard-gate; decision is FAIL at 10/10 risk.
+![FAIL case](https://via.placeholder.com/800x600?text=FAIL+Case:+Prohibited+Industry)
+
+**Officer-gated findings:** Detailed per-tool findings and audit trace are revealed only after entering the passcode.
+![Gated detail](https://via.placeholder.com/800x600?text=Gated+Detail:+Findings+and+Audit+Trace)
+
 ## Notes / limitations (good to be honest about in interviews)
 
 - **Sanctions matching is simple** (token match, not fuzzy/phonetic). Real screening adds

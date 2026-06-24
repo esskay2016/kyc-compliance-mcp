@@ -255,13 +255,21 @@ function Detail({ detail, decision }) {
   return (
     <div>
       {detail.overrideReasons?.length > 0 && (
-        <div style={S.override}>
-          <strong>Guardrail override:</strong>
-          <ul style={{ margin: "6px 0 0", paddingLeft: 18 }}>
-            {detail.overrideReasons.map((r, i) => <li key={i} style={{ fontSize: 13 }}>{r}</li>)}
-          </ul>
-        </div>
-      )}
+  <div style={S.override}>
+    <strong>Guardrail override:</strong>
+    <ul style={{ margin: "6px 0 0", paddingLeft: 18 }}>
+      {detail.overrideReasons.map((r, i) => <li key={i} style={{ fontSize: 13 }}>{r}</li>)}
+    </ul>
+  </div>
+)}
+{detail.complianceNotes?.length > 0 && (
+  <div style={S.complianceNote}>
+    <strong>Compliance notes:</strong>
+    <ul style={{ margin: "6px 0 0", paddingLeft: 18 }}>
+      {detail.complianceNotes.map((n, i) => <li key={i} style={{ fontSize: 13 }}>{n}</li>)}
+    </ul>
+  </div>
+)}
 
       <div style={S.findingGroup}>
         <div style={S.fgTitle}>Sanctions (OFAC SDN)</div>
@@ -358,6 +366,7 @@ const S = {
   lockNote: { fontSize: 13, color: "#7a8aa0", margin: "0 0 12px", lineHeight: 1.5 },
   unlock: { padding: "9px 18px", background: "#1a2332", color: "#fff", border: "none", borderRadius: 8, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap" },
   override: { padding: 12, background: "#fef6e7", border: "1px solid #d68910", borderRadius: 8, marginBottom: 12, fontSize: 13, color: "#8a5a08" },
+  complianceNote: { padding: 12, background: "#eef4fb", border: "1px solid #1f6fb2", borderRadius: 8, marginBottom: 12, fontSize: 13, color: "#1a3a5c" },
   findingGroup: { marginBottom: 14 },
   fgTitle: { fontSize: 11, fontWeight: 700, color: "#1f6fb2", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 6 },
   fRow: { display: "flex", justifyContent: "space-between", fontSize: 13.5, padding: "5px 0", borderBottom: "1px solid #e3e8ee", color: "#34435a" },

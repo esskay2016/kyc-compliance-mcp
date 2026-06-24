@@ -143,17 +143,19 @@ in a compliance review.
 
 ## Screenshots
 
-**Clean business applicant (PASS):** All checks pass; decision is PASS at 2/10 risk.
-![PASS case](https://via.placeholder.com/800x600?text=PASS+Case:+Clean+Business)
+**Clean business applicant (PASS):** All checks pass; decision is PASS at 3/10 risk. Escalation due to lack of PEP integration. 
+<img width="1266" height="856" alt="Pass Clean Business" src="https://github.com/user-attachments/assets/0271baa6-c9d3-4c17-9269-67be8dac85c7" />
+<img width="1069" height="854" alt="Pass Clean_Details" src="https://github.com/user-attachments/assets/d0754ae6-bc7f-4a0d-98c9-759f0e7e7b6d" />
 
 **State-conditional industry (ESCALATE):** Cannabis in California triggers state-conditional escalation for enhanced due diligence.
-![ESCALATE case](https://via.placeholder.com/800x600?text=ESCALATE+Case:+Cannabis+in+CA)
+<img width="895" height="855" alt="Escalate State Condl Business" src="https://github.com/user-attachments/assets/5b31ccb3-75d2-40e3-8cdb-8c19cc4c32e2" />
 
 **Prohibited industry (FAIL):** Weapons dealer hard-gate; decision is FAIL at 10/10 risk.
-![FAIL case](https://via.placeholder.com/800x600?text=FAIL+Case:+Prohibited+Industry)
+<img width="1252" height="819" alt="Fail Prohibited Business" src="https://github.com/user-attachments/assets/ec83c72b-41f0-4e71-bff2-c178ff064cda" />
 
 **Officer-gated findings:** Detailed per-tool findings and audit trace are revealed only after entering the passcode.
-![Gated detail](https://via.placeholder.com/800x600?text=Gated+Detail:+Findings+and+Audit+Trace)
+<img width="979" height="851" alt="Gated Detail with PEP person" src="https://github.com/user-attachments/assets/efda214a-0728-480f-9516-72f974b57525" />
+
 
 ## Notes / limitations (good to be honest about in interviews)
 
